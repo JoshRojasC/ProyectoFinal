@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', ev => {
 function MostrarDatosConfiguracion(){
 //truco !fetch
 
-    let url
+    let url ;
+
 fetch('url')
 
     .then(response => response.json())
