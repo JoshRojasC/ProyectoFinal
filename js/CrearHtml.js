@@ -1,15 +1,14 @@
 export function MostrarHTML() {
 
-    let navbar = document.getElementById("Navbar").innerHTML = CrearNavbar();
-    let footer = document.getElementById("Footer").innerHTML = CrearFooter();;
-    let Noticias = document.getElementById("Noticias").innerHTML = CrearTarjetaNoticias();;
-
-   let Parrafo = document.getElementById("Parrafo").innerHTML = CrearParrafo();
-
+  let navbar = document.getElementById("Navbar").innerHTML = CrearNavbar();
+  let footer = document.getElementById("Footer").innerHTML = CrearFooter();;
+  let Noticias = document.getElementById("Noticias").innerHTML = CrearTarjetaNoticias();;
+  let banners = document.getElementById("Banners").innerHTML = CrearBanners();;
+  let Tabla = document.getElementById("TablaContainer").innerHTML = CrearTabla();;
 }
 
 function CrearNavbar() {
-    let html = `
+  let html = `
        <a class="navbar-brand" href="#">
           <img src="img/1-Logo.png" alt="Logo NoticiasTecnológicas" class="navegacion-principal__marca">
         </a>
@@ -31,12 +30,12 @@ function CrearNavbar() {
         </div>
       `
 
-    return html
+  return html
 }
 
 
 function CrearFooter() {
-    let html = `
+  let html = `
       <h3>Derechos de Autor de NoticiasTecnológicas</h3>
         <p>Sigue a NoticiasTecnológicas</p>
         <ul class="list-inline enlaces-pie" id="ListaFooter">
@@ -47,11 +46,11 @@ function CrearFooter() {
         </ul>
       `
 
-    return html
+  return html
 }
 
 function CrearTarjetaNoticias() {
-    let html = `
+  let html = `
        <section class=" banner  col-lg-4 ">
             <div class="card h-100">
               <img src="img/1-Noticia.jpg" class="card-img-top" alt="...">
@@ -64,12 +63,59 @@ function CrearTarjetaNoticias() {
       </section>
       `
 
-    return html
+  return html
 }
 
-function CrearParrafo(){
-    let html = `<p> josue </p>`
-    
-    return html;
-    
-    }
+
+function CrearBanners() {
+  let html = `<!-- Banner 1 -->
+      <div class="spaced-div">
+        <section class="banner banner-tarjetas-uno" id="Banner1">
+          <div class="container">
+            <h2>Lorem ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut qui laudantium id quam magni accusantium,
+              veritatis, ipsam labore, reprehenderit dolore repudiandae nemo sint deserunt! Suscipit facilis qui
+              inventore
+              consequatur fugit.</p>
+            <a href="#" class="boton">Más información <i class="fas fa-chevron-right"></i></a>
+          </div>
+        </section>
+      </div>
+
+      <!-- Banner 2 -->
+      <div class="spaced-div">
+        <section class="banner banner-tarjetas-dos" id="Banner2">
+          <div class="container">
+            <h2>Lorem ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut qui laudantium id quam magni accusantium,
+              veritatis, ipsam labore, reprehenderit dolore repudiandae nemo sint deserunt! Suscipit facilis qui
+              inventore
+              consequatur fugit.</p>
+            <a href="#" class="boton">Más información <i class="fas fa-chevron-right"></i></a>
+          </div>
+        </section>
+      </div>
+  `;
+return html
+}
+
+function CrearTabla(){
+  let html = `
+  <table class="table table-striped table-inverse table-responsive container col-6 text-white" id="Tabla">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>asas</td>
+        <td>asas</td>
+      </tr>
+    </tbody>
+  </table>
+`;
+return html;
+}
