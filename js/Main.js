@@ -1,8 +1,11 @@
-import { MostrarHTML } from "/js/CrearHtml.js"
-import { MostrarDatosEnConsola } from "/js/ConsultarJson.js"
-
+import { MostrarHTML } from "/js/Global.js"
+import { ObtenerDatosConfiguracion, ObtenerDatosApiRick } from "./Servicios_Config.js"
+import { MostrarCard } from "./Card.js"
+/* Los componentes */
 document.addEventListener('DOMContentLoaded', ev => {
     MostrarHTML()
-    MostrarDatosEnConsola();
+    ObtenerDatosConfiguracion()
+    ObtenerDatosApiRick()
+    MostrarCard()
 })
 
